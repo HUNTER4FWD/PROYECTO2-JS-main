@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>𝐇𝐔𝐍𝐓𝐄𝐑 | 𝐈𝐍𝐈𝐂𝐈𝐎</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="icon" href="/icon/black b.ico" />
+  </head>
+
+  <body>
+    <header>
+      <h2 class="logo">🅷🆄🅽🆃🅴🆁</h2>
+    </header>
+    <div class="container">
+      <h1 id="tituloss">Eventos y Tareas</h1>
+
+      <div id="eventos">
+        <h2>🅴🆅🅴🅽🆃🅾🆂</h2>
+        <form id="evento-form">
+          <input
+            type="text"
+            id="evento-titulo"
+            placeholder="Título del evento"
+            required
+          />
+          <input type="date" id="evento-fecha" required />
+          <button type="submit">Agregar Evento</button>
+        </form>
+        <ul id="lista-eventos"></ul>
+      </div>
+
+      <div id="tareas">
+        <h2>🆃🅰🆁🅴🅰🆂</h2>
+        <form id="tarea-form">
+          <input
+            type="text"
+            id="tarea-titulo"
+            placeholder="Título de la tarea"
+            required
+          />
+          <select id="tarea-prioridad" required>
+            <option value="">Prioridad</option>
+            <option value="alta">Alta</option>
+            <option value="media">Media</option>
+            <option value="baja">Baja</option>
+          </select>
+          <button type="submit">Agregar Tarea</button>
+        </form>
+        <ul id="lista-tareas"></ul>
+      </div>
+    </div>
+
+    <div id="modal-editar-evento" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Editar Evento</h2>
+        <form id="editar-evento-form">
+          <input
+            type="text"
+            id="editar-evento-titulo"
+            placeholder="Título del evento"
+            required
+          />
+          <input type="date" id="editar-evento-fecha" required />
+          <button type="submit">Guardar Cambios</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="modal-editar-tarea" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Editar Tarea</h2>
+        <form id="editar-tarea-form">
+          <input
+            type="text"
+            id="editar-tarea-titulo"
+            placeholder="Título de la tarea"
+            required
+          />
+          <select id="editar-tarea-prioridad" required>
+            <option value="alta">Alta</option>
+            <option value="media">Media</option>
+            <option value="baja">Baja</option>
+          </select>
+          <button type="submit">Guardar Cambios</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="/js/java.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script type="text/javascript"></script>
+  </body>
+</html>
