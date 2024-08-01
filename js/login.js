@@ -73,3 +73,4 @@ const loginUser = (event) => {
 
 // Event listener para el evento de submit del formulario de login
 document.querySelector("form").addEventListener("submit", loginUser); // Asocia la función loginUser al evento submit del formulario
+//suerte a todos 
