@@ -15,7 +15,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: url("/img/couple_starry_sky_art_123338_1920x1080.jpg") no-repeat;
+  background: url("/img/linux.jpg") no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -34,7 +34,7 @@ header {
 
 .logo {
   font-size: 2em;
-  color: #000000;
+  color: navy;
   user-select: none;
 }
 
@@ -95,7 +95,7 @@ header {
   border: 2px solid rgb(111, 0, 255);
   border-radius: 20px;
   backdrop-filter: blur(20px);
-  box-shadow: 0 0 30px #330085f6;
+  box-shadow: 0 0 30px #330085f6 ;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -110,13 +110,37 @@ font-size: 3em;
 .wrapper .btn {
 font-size: 20px;
 color: #ffffff;
-background-color: #000000;
 cursor: pointer;
+width: 100%;
+  height: 45px;
+  background: #000000;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  -webkit-animation-name: animation;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;    
+  -webkit-animation-play-state: running;
+  
+  animation-name: animation;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;    
+  animation-play-state: running;
+  background-color: red ;
 }
 
-.wrapper .btn:hover {
-background-color: #ff0000;
-box-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red;
+@-webkit-keyframes animation {
+  0%     {background-color:hwb(0 0% 100%);}
+  50.0%  {background-color: navy;}
+  100.0%  {background-color:#000000;}
+}
+
+@keyframes animation {
+  0%     {background-color:navy;}
+  50.0%  {background-color:black;}
+  100.0%  {background-color:navy;}
 }
 
 
@@ -187,15 +211,21 @@ box-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red;
 }
 
 .remember-forgot label input {
-  accent-color: #162938;
+  accent-color: navy;
   margin-right: 3px;
 }
 
 .remember-forgot a {
-  color: #162938;
+  color: navy;
   text-decoration: none;
 }
 
-.remember-forgot a:hover {
-  text-decoration: underline;
+
+.login-register{
+color: #ffffff;
+text-align: center;
+}
+.login-register .register-link {
+color: navy;
+
 }

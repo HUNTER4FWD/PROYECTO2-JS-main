@@ -35,9 +35,32 @@ document.addEventListener("DOMContentLoaded", () => {
     e.preventDefault(); // Prevenir envío de formulario
     const titulo = document.getElementById("evento-titulo").value; // Obtener título del evento
     const fecha = document.getElementById("evento-fecha").value; // Obtener fecha del evento
+
+    // Verificar si el evento ya existe
+    const eventos = obtenerEventos(); // Obtener eventos del Local Storage
+    const eventoExistente = eventos.find((evento) => evento.titulo === titulo);
+
+    if (eventoExistente) {
+      Swal.fire({
+        // Muestra una alerta de error
+        title:
+          "Hoy no pudo venir Nian Cat por el agua pero dijo que estas bien pendejo no vez que ya la creaste", // Título de la alerta
+        width: 600, // Ancho de la alerta
+        padding: "3em", // Padding de la alerta
+        color: "red", // Color del texto de la alerta
+        background: "#fff url(https://sweetalert2.github.io/images/trees.png)", // Fondo de la alerta con una imagen
+        backdrop: ` // Fondo de la alerta
+              rgba(0,0,123,0.4) // Color de fondo
+              url("https://sweetalert2.github.io/images/nyan-cat.gif") // Imagen de fondo
+              left top // Posición de la imagen
+              no-repeat // No repetir la imagen
+            `,
+      });
+      return;
+    }
+
     const evento = { titulo, fecha }; // Crear objeto evento
 
-    const eventos = obtenerEventos(); // Obtener eventos del Local Storage
     eventos.push(evento); // Agregar nuevo evento
     localStorage.setItem("eventos", JSON.stringify(eventos)); // Guardar eventos actualizados en Local Storage
 
@@ -49,9 +72,33 @@ document.addEventListener("DOMContentLoaded", () => {
     e.preventDefault(); // Prevenir envío de formulario
     const titulo = document.getElementById("tarea-titulo").value; // Obtener título de la tarea
     const prioridad = document.getElementById("tarea-prioridad").value; // Obtener prioridad de la tarea
+
+    // Verificar si la tarea ya existe
+    const tareas = obtenerTareas(); // Obtener tareas del Local Storage
+    const tareaExistente = tareas.find((tarea) => tarea.titulo === titulo);
+
+    if (tareaExistente) {
+      // Si no encuentra un usuario con las mismas credenciales
+      Swal.fire({
+        // Muestra una alerta de error
+        title:
+          "Hoy no pudo venir Nian Cat por el agua pero dijo que estas bien pendejo no vez que ya la creaste", // Título de la alerta
+        width: 600, // Ancho de la alerta
+        padding: "3em", // Padding de la alerta
+        color: "red", // Color del texto de la alerta
+        background: "#fff url(https://sweetalert2.github.io/images/trees.png)", // Fondo de la alerta con una imagen
+        backdrop: ` // Fondo de la alerta
+              rgba(0,0,123,0.4) // Color de fondo
+              url("https://sweetalert2.github.io/images/nyan-cat.gif") // Imagen de fondo
+              left top // Posición de la imagen
+              no-repeat // No repetir la imagen
+            `,
+      });
+      return;
+    }
+
     const tarea = { titulo, prioridad }; // Crear objeto tarea
 
-    const tareas = obtenerTareas(); // Obtener tareas del Local Storage
     tareas.push(tarea); // Agregar nueva tarea
     localStorage.setItem("tareas", JSON.stringify(tareas)); // Guardar tareas actualizadas en Local Storage
 

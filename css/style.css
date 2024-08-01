@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", cursive;
 }
 
 body {
@@ -12,10 +12,11 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: url("/img/anime-girl-nun-with-tattoo-hd-wallpaper-uhdpaper.com-740@3@a.jpg")
+  background: url("/img/linux.jpg")
     no-repeat;
   background-size: cover;
   background-position: center;
+  font-family: "Poppins", cursive;
 }
 
 header {
@@ -32,7 +33,7 @@ header {
 
 .logo {
   font-size: 2em;
-  color: hsl(0, 0%, 0%);
+  color: navy;
   user-select: none;
 }
 
@@ -164,13 +165,13 @@ form button {
 
 @-webkit-keyframes animation {
   0%     {background-color:black;}
-  50.0%  {background-color:red;}
+  50.0%  {background-color:navy;}
   100.0%  {background-color:hsl(0, 0%, 0%);}
 }
 
 @keyframes animation {
   0%     {background-color:#000000;}
-  50.0%  {background-color:yellow;}
+  50.0%  {background-color:navy;}
   100.0%  {background-color:black;}
 }
 
@@ -185,11 +186,14 @@ li {
   background: transparent;
   margin: 10px 0;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 15px;
+font-size: 1.5em;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
+  color: white;
+ }
+
 
 li button {
   background: hwb(0 0% 6% / 0.829);
@@ -201,7 +205,7 @@ li button {
 }
 
 li button:hover {
-  background: #c82333;
+  background: navy;
 }
 
 li .edit-btn {
@@ -312,6 +316,7 @@ li .edit-btn:hover {
     font-size: 0.9em;
     margin-left: 10px;
   }
+  
 
   .wrapper {
     width: 95%;
